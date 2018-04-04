@@ -30,15 +30,15 @@ def reroute(changepin):
 	changePin = int(changepin) #cast changepin to an int
 
 	if changePin == 1:
-		motors.turnLeft()
+		motors.leftGPIO()
 	elif changePin == 2:
-		motors.forward()
+		motors.forwardGPIO()
 	elif changePin == 3:
-		motors.turnRight()
+		motors.rightGPIO()
 	elif changePin == 4:
-		motors.backward()
+		motors.reverseGPIO()
 	else:
-		motors.stop()
+		motors.stopGPIO()
 
 
 	response = make_response(redirect(url_for('index')))
